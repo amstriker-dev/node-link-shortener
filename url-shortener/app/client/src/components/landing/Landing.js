@@ -15,8 +15,6 @@ class Landing extends Component {
       apiError: "",
       showApiError: false,
       showLoading: false,
-      exUrl:
-        "https://www.amazon.com/Apple-iPhone-GSM-Unlocked-5-8/dp/B075QMZH2L",
       exShortUrl: constants.baseUrl
     };
     this.handleUserInput = this.handleUserInput.bind(this);
@@ -52,6 +50,8 @@ class Landing extends Component {
             apiError: "Server Error"
           });
         });
+        
+        this.setState({ showError: false });
     } else {
       this.setState({ showError: true });
     }
@@ -60,11 +60,11 @@ class Landing extends Component {
     if (!this.state.showLoading) {
       return (
         <button
-          className="btn waves-effect waves-light submit-btn"
+          className="btn waves-effect waves-light #424242 grey darken-3 submit-btn"
           name="action"
           onClick={this.handleSubmit}
         >
-          Submit
+          SHORTEN URL
         </button>
       );
     } else {
@@ -93,12 +93,7 @@ class Landing extends Component {
         <div>
           <h5> Original Url</h5>
         </div>
-        <div>
-          Ex:{" "}
-          <a target="_blank" href={this.state.exUrl}>
-            {this.state.exUrl}
-          </a>
-        </div>
+
         <input
           name="originalUrl"
           field="originalUrl"
@@ -111,18 +106,7 @@ class Landing extends Component {
           <div className="formError">Original Url is required</div>
         )}
 
-        <div>
-          <h5>*Base Url</h5>
-        </div>
 
-        <input
-          field="baseUrl"
-          name="baseUrl"
-          placeholder={this.state.exShortUrl}
-          value={this.state.baseUrl}
-          onChange={this.handleUserInput.bind(this)}
-          disabled
-        />
         {this.renderButton()}
         {this.state.showApiError && (
           <div className="shorten-error">{this.state.apiError}</div>
@@ -135,13 +119,7 @@ class Landing extends Component {
             </a>
           </div>
         )}
-        <div className="shorten-imp">
-          [* Here base url has the default value{" "}
-          <a target="_blank" href={this.state.exShortUrl}>
-            {this.state.exShortUrl}
-          </a>{" "}
-          .This will change based on domain name]
-        </div>
+
       </div>
     );
   }

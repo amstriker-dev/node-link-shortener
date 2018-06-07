@@ -23,6 +23,20 @@ mongoose.connect(dbConfig.url)
     process.exit();
 });
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-type,Accept,x-access-token,X-Key"
+  );
+  if (req.method == "OPTIONS") {
+    res.status(200).end();
+  } else {
+    next();
+  }
+});
+
 // define a simple route
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to UrlShorten application."});

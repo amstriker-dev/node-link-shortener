@@ -17,9 +17,6 @@ class App extends Component {
                   </Switch>
                 </div>
               </BrowserRouter>
-              <div className="footer">
-                Built by{" "}
-              </div>
 
       </div>
     );
