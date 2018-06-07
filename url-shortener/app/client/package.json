@@ -1,0 +1,26 @@
+{
+  "name": "urlShortenerClient",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "repository": "git@github.com:jaihan/node-link-shortener.git",
+  "author": "amstriker",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "create-react-scripts": "^0.1.6",
+    "materialize-css": "^0.100.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

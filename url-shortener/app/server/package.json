@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "\"\"",
   "main": "server.js",
+  "scripts": {
+  "start": "node server.js",
+  "server": "nodemon server.js --ignore tests"
+},
   "repository": "git@github.com:jaihan/node-link-shortener.git",
   "author": "amstriker",
   "license": "MIT",
