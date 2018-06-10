@@ -8,7 +8,6 @@
     - [Mongoose](https://http://mongoosejs.com)- MongoDB object modeling tool
     - [Short-id](https://github.com/dylang/shortid)- Short id generator
     - [Valid-url](https://github.com/ogt/valid-url)- URI validation functions   
-    - [Nginx](https://www.nginx.com)- Nginx is event-based and asynchronous web server.
 
 - ### Front end
     - [React](https://reactjs.org/) - JavaScript library for building user interfaces.
@@ -18,7 +17,7 @@
     
 #### Run back end
 ```
-yarn run server
+yarn run start
 ```
 #### Run front end
 ```
